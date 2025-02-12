@@ -1,0 +1,37 @@
+﻿@model İlanlar
+
+<div class="container mt-4">
+    <h2 class="text-center">İlan Sistemi</h2>
+
+    @* <h4 class="mt-4">Kategoriler</h4>
+    <div class="d-flex gap-3">
+        @foreach (var kategori in Model.Kategoriler)
+        {
+            <div class="text-center">
+                <a href="/Home/SeciliKategoriListesi/@kategori.Id"><img src="@kategori.KategoriGorselURL" style="width:50px" width="50"></a>
+                <p>@kategori.KategoriAdi</p>
+            </div>
+        }
+
+    </div> *@
+
+    <h4 class="mt-4">Son İlanlar</h4>
+    <div class="row">
+        
+            <div class="col-sm-12" *ngFor="let ilan of ilanlar">
+                <div class="card">
+                    <img src="@Model.DetayGorselURL" style="width:200px" class="card-img-top" alt="İlan Resmi">
+                    <div class="card-body">
+                    <h5 class="card-title">@Model.Baslik</h5>
+                    <p class="card-text">@Model.Fiyat.ToString("C")</p>
+                    <p class="card-text">@Model.DetayYazisi</p>
+                    <p>Eklenme tarihi @Model.EklenmeTarihi.ToString("d")</p>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+
+
+</div>

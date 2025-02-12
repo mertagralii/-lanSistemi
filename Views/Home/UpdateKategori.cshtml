@@ -1,0 +1,9 @@
+﻿@model Kategoriler
+
+<h5>Kategori Güncelle</h5>
+<form action="/Home/UpdateKategori" method="post" autocomplete="off">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="text" class="form-control mb-2" placeholder="Kategori Adı" name="KategoriAdi" value="@Model.KategoriAdi">
+    <input type="text" class="form-control mb-2" placeholder="Görsel URL" name="KategoriGorselURL" value="@Model.KategoriGorselURL">
+    <button class="btn btn-success">Güncelle</button>
+</form>

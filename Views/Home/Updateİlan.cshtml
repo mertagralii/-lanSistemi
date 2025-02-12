@@ -1,0 +1,23 @@
+﻿@model UpdateİlanViewModel
+<form action="/Home/Updateİlan" method="post" autocomplete="off">
+    <select class="form-control mb-2" name="KategoriId">
+        @foreach (var kategoriler in Model.Kategoriler)
+        {
+           @if(Model.İlan.KategoriId == kategoriler.Id)
+           {
+                <option value="@kategoriler.Id" selected>@kategoriler.KategoriAdi</option>
+           }else
+           {
+                <option value="@kategoriler.Id">@kategoriler.KategoriAdi</option>
+           }
+        }
+
+    </select>
+    <input type="hidden" value="@Model.İlan.IlanId" name="Id" />
+    <input type="text" class="form-control mb-2" placeholder="Başlık giriniz." name="Baslik" value="@Model.İlan.Baslik">
+    <input type="number" class="form-control mb-2" placeholder="Fiyat giriniz." name="Fiyat" value="@Model.İlan.Fiyat">
+    <input type="text" class="form-control mb-2" placeholder="Listede Gözükecek Resmin URLsini yazınız." name="ListeGorselURL" value="@Model.İlan.ListeGorselURL>
+    <input type="text" class="form-control mb-2" placeholder="Detayda gözükecek resmin URLsini yazınız." name="DetayGorselURL" value="@Model.İlan.DetayGorselURL">
+    <textarea class="form-control mb-2" placeholder="Detay" name="DetayYazisi">@Model.İlan.DetayYazisi</textarea>
+    <button class="btn btn-success">Ekle</button>
+</form>
