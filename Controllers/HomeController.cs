@@ -48,7 +48,7 @@ namespace İlanSistemi.Controllers
         [HttpPost]
         public IActionResult UpdateKategori(Kategoriler kategoriler)
         {
-            var updateKategori = _connection.Execute(@"UPDATE Kategoriler SET KategoriAdi = @KategoriAdi WHERE Id=@Id", kategoriler);
+            var updateKategori = _connection.Execute(@"UPDATE Kategoriler SET KategoriAdi = @KategoriAdi , KategoriGorselURL = @KategoriGorselURL WHERE Id=@Id", kategoriler);
             return RedirectToAction("Index");
         }
 
@@ -148,7 +148,7 @@ namespace İlanSistemi.Controllers
 
         public IActionResult SeciliKategoriListesi(int Id) 
         {
-            var KategoriİlanList = _connection.Query<İlanlarKategorilerLeftJoin>("SELECT * FROM İlanlar LEFT JOIN Kategoriler ON İlanlar.KategoriId = Kategoriler.Id  WHERE İlanlar.KategoriId = @KategoriId ORDER BY İlanlar.EklenmeTarihi DESC ", new { KategoriId = Id }).ToList();
+            var KategoriİlanList = _connection.Query<İlanlarKategorilerLeftJoin>("SELECT i.Id AS IlanId, i.KategoriId, i.Baslik, i.Fiyat, i.ListeGorselURL,i.DetayGorselURL ,İ.EklenmeTarihi, i.DetayYazisi, k.KategoriAdi  FROM İlanlar i LEFT JOIN Kategoriler k ON i.KategoriId = k.Id WHERE i.KategoriId = @KategoriId  ORDER BY i.EklenmeTarihi DESC ", new { KategoriId = Id }).ToList();
             var kategoriList = _connection.Query<Kategoriler>("SELECT * FROM Kategoriler").ToList();
 
             var model = new SeciliKategoriListesi() { Kategoriler = kategoriList, İlanlar = KategoriİlanList };
