@@ -7,9 +7,13 @@ Bu proje, Acun Medya Akademi Genişletilmiş Back-End Yazılım Uzmanlığı eğ
 ## 🚀 Özellikler
 
  📋 **Kategori Listesi**: Kullanıcıların ilanları kategorilere göre listeleyebilmesi.
+
  ✏ **CRUD İşlemleri** : İlan oluşturma, düzenleme, silme ve kategorilere göre düzenleme.
+
 🔍 **İlan Detay Sayfası**: Her bir ilanın detaylarıyla birlikte, ilanın ait olduğu kategori bilgisi.
+
 📸 **Görsel Yönetimi**: İlanların görsellerinin URL'leri ile yönetilmesi.
+
 🗂 **Kategori Yönetimi**: Yeni kategori ekleme, güncelleme ve silme işlemleri.
 
 ## 🛠 Kullanılan Teknolojiler
