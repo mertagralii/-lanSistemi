@@ -1,13 +1,16 @@
-# Sale Management System
+# İlan Sistemi
 
-Bu proje, satış yönetimi süreçlerini kolaylaştırmak için geliştirilmiş bir ASP.NET Core MVC uygulamasıdır. Teklif yönetimi, müşteri bilgileri ve satış aşamalarını takip etmeyi sağlar.
-Bu proje, Acun Medya Akademi Genişletilmiş Back-End Yazılım Uzmanlığı eğitiminin temel eğitimini tamamladıktan sonra, uzmanlık aşamasına geçiş sürecindeki kamp döneminde geliştirilmiştir.
+Bu proje, kullanıcıların ilanlar oluşturup, düzenleyip, silebildiği ve kategorilere göre ilanları listeleyebildiği bir ASP.NET Core MVC uygulamasıdır. Kullanıcılar, ilanın başlık, fiyat, görsel ve detay gibi bilgilerini yönetebilir. Ayrıca, kategori bazında ilanları görüntüleyebilirler.
+
+Bu proje, Acun Medya Akademi Genişletilmiş Back-End Yazılım Uzmanlığı eğitiminin temel eğitiminden sonra, uzmanlık aşamasına geçiş sürecinde geliştirilmiştir.
 
 ## 🚀 Özellikler
 
-- 📌 **Satış Aşamaları**: Teklif, Pazarlık, Kazanılan ve Kaybedilen projelerin kategorilere ayrıldığı listeleme ekranı.
-- 📋 **Teklif Yönetimi**: Teklif başlığı, müşteri adı ve fiyat bilgisi ile yeni teklifler ekleme, mevcut teklifleri güncelleme ve silme işlemleri.
-- 🔄 **Durum Yönetimi**: Projelerin durumlarına göre sıralanmasını sağlayan düzenleme seçenekleri.
+ 📋 **Kategori Listesi**: Kullanıcıların ilanları kategorilere göre listeleyebilmesi.
+ ✏ **CRUD İşlemleri** : İlan oluşturma, düzenleme, silme ve kategorilere göre düzenleme.
+🔍 **İlan Detay Sayfası**: Her bir ilanın detaylarıyla birlikte, ilanın ait olduğu kategori bilgisi.
+📸 **Görsel Yönetimi**: İlanların görsellerinin URL'leri ile yönetilmesi.
+🗂 **Kategori Yönetimi**: Yeni kategori ekleme, güncelleme ve silme işlemleri.
 
 ## 🛠 Kullanılan Teknolojiler
 
