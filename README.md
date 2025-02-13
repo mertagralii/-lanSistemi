@@ -27,7 +27,7 @@ Bu proje, Acun Medya Akademi Genişletilmiş Back-End Yazılım Uzmanlığı eğ
 
 1. **Projeyi klonlayın:**
    ```sh
-   git clone https://github.com/mertagralii/-lanSistemi.git
+   git clone https://github.com/mertagralii/IlanSistemi.git
    ```
 2. **Bağımlılıkları yükleyin:**
    ```sh
